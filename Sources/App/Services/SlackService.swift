@@ -62,7 +62,7 @@ final class SlackService {
         let cacheKey = CacheKey.team.value(for: workspace)
         if let teamNode = try? cache.get(cacheKey), let team = try? teamNode.converted(to: Team.self, in: nil) {
             print("found team in cache")
-            return team
+//            return team
         }
         print("no team in cache; fetching from slack api")
         
@@ -88,7 +88,7 @@ final class SlackService {
             let activeUsers = activeUsersNode?.int
         {
             print("found user counts in cache")
-            return (activeUsers, totalUsers)
+//            return (activeUsers, totalUsers)
         }
         print("no user counts in cache; fetching from slack api")
 
